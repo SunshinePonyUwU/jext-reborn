@@ -10,7 +10,7 @@ fun sendResourcePack(player: Player) {
         val hostName = JextState.BASE_URL.getBaseUrl(player)
 
         if (CONFIG.RESOURCE_PACK_HOST_CUSTOM_URL != "") {
-            player.setResourcePack("{CONFIG.RESOURCE_PACK_HOST_CUSTOM_URL}", ASSETS_MANAGER.resourcePackHostedHash)
+            player.setResourcePack("${CONFIG.RESOURCE_PACK_HOST_CUSTOM_URL}", ASSETS_MANAGER.resourcePackHostedHash)
         }
         else {
             player.setResourcePack("http://${hostName}:${CONFIG.WEB_INTERFACE_PORT}/resource-pack.zip", ASSETS_MANAGER.resourcePackHostedHash)
