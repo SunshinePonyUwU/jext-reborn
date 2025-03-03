@@ -9,6 +9,11 @@ fun sendResourcePack(player: Player) {
     if(CONFIG.WEB_INTERFACE_API_ENABLED && CONFIG.RESOURCE_PACK_HOST) {
         val hostName = JextState.BASE_URL.getBaseUrl(player)
 
-        player.setResourcePack("http://${hostName}:${CONFIG.WEB_INTERFACE_PORT}/resource-pack.zip", ASSETS_MANAGER.resourcePackHostedHash)
+        if (CONFIG.RESOURCE_PACK_HOST_CUSTOM_URL != "") {
+            player.setResourcePack("{CONFIG.RESOURCE_PACK_HOST_CUSTOM_URL}", ASSETS_MANAGER.resourcePackHostedHash)
+        }
+        else {
+            player.setResourcePack("http://${hostName}:${CONFIG.WEB_INTERFACE_PORT}/resource-pack.zip", ASSETS_MANAGER.resourcePackHostedHash)
+        }
     }
 }

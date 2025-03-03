@@ -303,6 +303,10 @@
       "description": "If set to true, the plugin will host the resource pack and automatically send it to players.",
       "default": true
     },
+    "resource-pack-host-custom-url": {
+      "type": "string",
+      "description": "Custom resource pack download url that send to player"
+    },
     "web-interface-port": {
       "type": "integer",
       "description": "The port the web interface api & resource pack will be hosted on.",
@@ -334,6 +338,7 @@
     "allow-metrics",
     "force-resource-pack",
     "enable-resource-pack-host",
+    "resource-pack-host-custom-url",
     "web-interface-port",
     "web-interface-api-enabled",
     "web-interface-password"

@@ -117,6 +117,9 @@ data class Config(
     @SerializedName("enable-resource-pack-host")
     var RESOURCE_PACK_HOST : Boolean = true,
 
+    @SerializedName("resource-pack-host-custom-url")
+    var RESOURCE_PACK_HOST_CUSTOM_URL : String = "",
+
     @ConfigField(
         "Web interface port",
         "The port the web interface api & resource pack will be hosted on.",
